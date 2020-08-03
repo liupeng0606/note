@@ -36,7 +36,7 @@
 风格和内容分离，是很难做好分离，现在大家更倾向于把隐向量微调来生成符合要求的文本。作者说他们不同于传统的方法，将属性和内容表示分开进行建模。作者直接使用内容和属性缠绕在一起的表示。
 文中的模型主要分为两部分，一个是基于transformer的AutoEncoder，一个是Attribute 的Classifier。
 
-![Alt text](./1596467965497.png)
+![Alt text](https://github.com/liupeng0606/-/blob/master/2222.png)
 
 作者首先将AutoEncoder和Attribute Classifier分开来训练
 - 然后使用encoder部分去获得source sentence的隐层表示
@@ -53,4 +53,4 @@ FGIM算法的思想非常的简单，它使用预训练的隐向量属性分类�
 2. 生成的文本类似文本的风格转换，不能自由的生成文本，也就是说，如果我们把z约束到高斯分布，采样一个z，然后用分类器微调下，就可以得到随机生成的符合要求的句子。
 ### note
 虽然上面的想法很美好，但是不确定调参能否work，因为这篇论文的代码在github，提了很多issue，在它的基础上改进，是否会work。
-![Alt text](./1596468693702.png)
+![Alt text](https://github.com/liupeng0606/-/blob/master/111.png)
